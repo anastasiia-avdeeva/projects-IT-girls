@@ -3,18 +3,6 @@ a {
     color: black;
 }
 
-ul {
-    height: 80%;
-    margin: 1%;
-    padding: 2%;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    
-}
-
 .head-foot {
     height: 10vh;
     width: 100%;
@@ -28,21 +16,27 @@ ul {
     box-sizing: border-box;
     width: 50%;
     height: 100%;
+    margin-right: 3%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
 a.icons-link {
-    width: 6%;
+    /* width: 6%;
     height: 50%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
+    display: block;
+    box-sizing: border-box;
+    height: 80%;
+    margin-left: 2%;
+    padding: 3% 0%;
 }
 
 .icons {
-    width: 60%;
+    height: 100%;
 }  
 
 .logo-container {
@@ -52,8 +46,10 @@ a.icons-link {
 }
 
 .logo {
-    height: 90%;
-    width: 100%;
+    /* height: 90%;
+    width: 100%; */
+    display: block;
+    height: 98%;
 }
 
 main {
@@ -88,13 +84,13 @@ h1 {
 
 h2 {
     font-size: 20pt;
-    margin: 0%;
+    margin: 1% 0%;
 }
 
 .main-content {
-    flex-grow: 1;
     display: flex;
     justify-content: space-between;
+    flex-grow: 1;
     border: 1px solid black;
 }
 
@@ -102,7 +98,76 @@ nav {
     width: 20%;
 }
 
-.gallery {
+ul {
+    height: 80%;
+    margin: 1%;
+    padding: 2%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+li>a:hover {
+    color: rgb(233, 185, 42);
+    cursor: pointer;
+}
+.gallery-container {
     width: 80%;
+    display: flex;
+    flex-direction: column;
     border: 1px solid red;
 }
+
+.gallery {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+figure {
+    width: 15%;
+    margin: 2%;
+    aspect-ratio: 4 / 3;
+    text-align: center;
+}
+
+.gallery-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid violet;
+}
+
+.pic {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 
+.gallery-link {
+    width: 15%; 
+    aspect-ratio: 4 / 3; 
+    overflow: hidden; 
+    border: 1px solid violet;
+}
+
+.pic {
+    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+}
+
+#mirror-pic {
+    height: 52%;
+}
+
+#ship-pic {
+    height: 58%;
+} */
