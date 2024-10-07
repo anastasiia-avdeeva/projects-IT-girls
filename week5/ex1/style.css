@@ -1,6 +1,7 @@
 body {
     height: 100vh;
     font-weight: bold;
+    
 }
 
 header {
@@ -100,6 +101,15 @@ footer {
 }
 
 .foot-section {
-    padding: 2% 1.5%;
+    box-sizing: border-box;
+    height: 50%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Обрезка текста, если он выходит за границы */
+    white-space: normal; /* Разрешить перенос текста */
+    word-wrap: break-word;
     background-color: white;
 }
