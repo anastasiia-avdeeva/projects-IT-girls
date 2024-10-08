@@ -14,33 +14,42 @@ ul {
 }
 
 body {
-    background: #FBF8F8;
+    background: #FFFEFE;
+    color: #59443F;
     font-family: "Jost", sans-serif;
     font-optical-sizing: auto;
+    font-size: clamp(0.5rem, 1.5vw, 1rem);
     font-weight: 400;
     font-style: normal;
     font-feature-settings: 'liga' off, 'clig' off;
+    line-height: 150%;
 }
 
 h1,
 h2,
 h3 {
+    color: #080606;
     font-family: "Cormorant Garamond", serif;
     font-weight: 400;
     font-style: normal;
     font-feature-settings: 'liga' off, 'clig' off;
+    line-height: 150%;
 }
 
+h2.subtitle {
+    font-size: clamp(1.2rem, 3vw, 3rem);
+    line-height: 100%;
+    margin-bottom: 6%;
+}
 
 .first-line {
-    /* border: 1px solid black; */
     margin: 20px 2.5%;
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-areas: "logo navigation city";
     align-items: center;
-    font-weight: 700;
     color: #C3B9B5;
+    font-weight: 700;
     font-size: 1.3vw;
 }
 
@@ -85,7 +94,6 @@ h3 {
 }
 
 .header-banner-and-list {
-    /* border: 1px solid black; */
     margin-top: 5%;
     margin-left: 4.5%;
     display: grid;
@@ -101,11 +109,9 @@ h3 {
     font-weight: 700;
     font-size: 1.2vw;
     color: #C3B9B5;
-    /* border: 1px solid black; */
 }
 
 .header-banner {
-    /* border: 1px solid black; */
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -191,13 +197,9 @@ h3 {
 }
 
 .dep-cards {
-    /* border: 1px solid black; */
-    margin-top: 7%;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin: 8% 15%;
     width: 70vw;
     display: grid;
-    /* grid-template-columns: repeat(4, 1fr); */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 24px;
 }
@@ -210,6 +212,7 @@ h3 {
     /* border: 1px solid red; */
     border-radius: 20px;
     background: #FFF;
+    box-shadow: 3px 3px 10px rgb(215, 213, 213);
 }
 
 .dep-card:hover {
@@ -250,4 +253,61 @@ h3 {
 
 .dep-card9>.dep-image {
     width: 8vw;
+}
+
+.history-employees {
+    background-color: #FBF8F8;
+    text-align: center;
+}
+
+.history-section {
+    margin: 5% 30%;
+    padding-top: 5%;
+    width: 40vw;
+}
+
+.history-section p {
+    padding: 0% 10% 5% 10%;
+    text-align: left;
+}
+
+.read-more {
+    font-weight: 700;
+    color: #FFC59E;
+    font-size: clamp(0.5rem, 1.3vw, 1rem);
+}
+
+.employees {
+    padding-bottom: 10%;
+}
+
+.employees>.subtitle {
+    margin-bottom: 3%;
+}
+
+.employees-slider {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 3vw;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+
+}
+
+.photo-link {
+    width: 10vw;
+}
+
+.photo-link img {
+    width: 100%;
+}
+
+.button-slider {
+    border: 0;
+    width: 10vw;
+}
+
+.button-slider img {
+    width: 100%;
 }
