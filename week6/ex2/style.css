@@ -320,7 +320,7 @@ h2.subtitle {
 }
 
 .inform-banner-wrap {
-    margin-left: 30%;
+    margin-left: 35%;
     margin-right: 35%;
     width: 30%;
     position: relative;
@@ -351,5 +351,54 @@ h2.subtitle {
 }
 
 .inform-img-container>img {
+    width: 100%;
+}
+
+.pro-cards-section {
+    margin-bottom: 10%;
+}
+
+.pro-cards-section>.subtitle {
+    text-align: center;
+}
+
+.pro-cards {
+    width: 85vw;
+    margin: 0% 12.5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 25vw));
+    gap: 30px;
+
+}
+
+.pro-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(3, auto);
+    gap: 5%;
+    grid-template-areas: "title title"
+        "img-container description";
+    align-items: center;
+}
+
+.pro-card-title {
+    grid-area: title;
+    font-size: clamp(1rem, 1.5vw, 3rem);
+}
+
+.pro-img-container {
+    grid-area: img-container;
+}
+
+.pro-card-description {
+    grid-area: description;
+    font-size: clamp(0.5rem, 0.9vw, 1rem);
+}
+
+.pro-img-container {
+    width: 5vw;
+}
+
+.pro-img-container>img {
     width: 100%;
 }
