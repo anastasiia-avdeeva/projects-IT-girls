@@ -84,7 +84,7 @@ h2.subtitle {
 }
 
 
-.address-icon {
+.address-icon-header {
     height: 100%;
     max-height: 60%;
 }
@@ -206,7 +206,7 @@ h2.subtitle {
 }
 
 .dep-card {
-    padding-left: 5%;
+    padding-left: 10px;
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(3, auto);
@@ -227,7 +227,7 @@ h2.subtitle {
 .card-title {
     color: #59443F;
     line-height: 40px;
-    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    font-size: clamp(0.5rem, 1.2vw, 1.5rem);
 }
 
 .dep-image {
@@ -388,15 +388,15 @@ h2.subtitle {
 
 .pro-img-container {
     grid-area: img-container;
+    width: 5vw;
+}
+
+.description {
+    font-size: clamp(0.5rem, 0.9vw, 1rem);
 }
 
 .pro-card-description {
     grid-area: description;
-    font-size: clamp(0.5rem, 0.9vw, 1rem);
-}
-
-.pro-img-container {
-    width: 5vw;
 }
 
 .pro-img-container>img {
@@ -470,4 +470,74 @@ h2.subtitle {
     position: absolute;
     bottom: -6%;
     left: 35%;
+}
+
+.contacts-banner {
+    margin: 10% 5% 5% 15%;
+}
+
+.address-container-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "address1 map"
+        "address2 map";
+}
+
+.address-container-subtitle {
+    margin-bottom: 5%;
+    font-size: clamp(0.5rem, 1.5vw, 3rem);
+}
+
+.address-container1 {
+    grid-area: address1;
+}
+
+.address-container2 {
+    grid-area: address2;
+}
+
+.map-link-container {
+    grid-area: map;
+    width: 100%;
+}
+
+.map-link {
+    display: block;
+    width: 100%;
+}
+
+.map-link>img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.address-phone-hours {
+    width: 60%;
+    display: grid;
+    justify-items: start;
+    gap: 10px;
+}
+
+.address,
+.phone,
+.hours {
+    display: grid;
+    grid-auto-flow: column;
+
+}
+
+
+.address-icon,
+.phone-icon,
+.clock-icon {
+    width: 60%;
+}
+
+.address-icon {
+    padding-top: 15%;
+}
+
+footer {
+    color: #FFF;
+    background-color: #59443F;
 }
