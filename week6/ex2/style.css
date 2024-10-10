@@ -103,7 +103,6 @@ h2.subtitle {
 
 .header-list {
     margin-left: 10%;
-    height: 80%;
     display: grid;
     grid-template-columns: auto;
     font-weight: 700;
