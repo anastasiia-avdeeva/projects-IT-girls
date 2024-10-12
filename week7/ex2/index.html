@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/styles/normalize.css" />
-    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/sass/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -44,22 +44,11 @@
             alt="иконка локации"
             class="address-icon-header"
           />
-          <form action="submit">
-            <button class="city">Волгоград</button>
-          </form>
+          <button type="submit" class="city">Волгоград</button>
         </div>
-        <!-- <div class="city-header">
-          <img
-            src="assets/icons/ic_location.svg"
-            alt="иконка локации"
-            class="address-icon-header"
-          />
-          <span class="city">Волгоград</span>
-        </div> -->
       </div>
-
-      <!-- <div class="header-banner-and-list">
-        <ul class="header-list">
+      <div class="page-nav-header-banner">
+        <ul class="page-nav">
           <li><a href="#">1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
@@ -68,7 +57,7 @@
           <li><a href="#">6</a></li>
         </ul>
         <div class="header-banner">
-          <div class="left">
+          <div class="left-header-banner">
             <h1 class="title">Айболит круглосуточная ветклиника</h1>
             <a class="appointment-form-link">ЗАПИСАТЬСЯ</a>
             <div class="social-links">
@@ -102,25 +91,492 @@
               </a>
             </div>
           </div>
-          <div class="right">
-            <div class="img-container1">
+          <div class="right-header-banner">
+            <div class="header-banner-img-container1">
               <img
                 src="assets/pictures/dog.png"
                 alt="фото собаки"
-                class="banner-img1"
+                class="header-banner-img1"
               />
             </div>
-            <div class="img-container2">
+            <div class="header-banner-img-container2">
               <img
                 src="assets/pictures/cat.png"
                 alt="фото кота"
-                class="banner-img2"
+                class="header-banner-img2"
               />
             </div>
             <a href="tel:+78442962292" class="phone-link">+7 (8442) 96 22 92</a>
           </div>
         </div>
-      </div> -->
+      </div>
     </header>
+
+    <main>
+      <!-- dep from department -->
+      <section class="dep-cards">
+        <div class="dep-card dep-card1">
+          <h3 class="dep-card-title">Терапия</h3>
+          <div class="dep-image">
+            <img
+              src="assets/icons/departments/therapy.svg"
+              alt="иконка сложенного в форме бычка стетоскопа"
+            />
+          </div>
+          <span class="dep-card-span">26 услуг</span>
+        </div>
+        <div class="dep-card dep-card2">
+          <h3 class="dep-card-title">Хирургия</h3>
+          <div class="dep-image">
+            <img
+              src="assets/icons/departments/surgery.svg"
+              alt="иконка скальпеля"
+            />
+          </div>
+          <span class="dep-card-span">26 услуг</span>
+        </div>
+        <div class="dep-card dep-card3">
+          <h3 class="dep-card-title">Неврология</h3>
+          <div class="dep-image">
+            <img
+              src="assets/icons/departments/neurology.svg"
+              alt="иконка песика вылезающего из медцицинского воротника"
+            />
+          </div>
+          <span class="dep-card-span">26 услуг</span>
+        </div>
+        <div class="dep-card dep-card4">
+          <h3 class="dep-card-title">Ортопедия</h3>
+          <div class="dep-image">
+            <img
+              src="assets/icons/departments/ortho.svg"
+              alt="иконка сломанной кости"
+            />
+          </div>
+          <span class="dep-card-span">26 услуг</span>
+        </div>
+        <div class="dep-card dep-card5">
+          <h3 class="dep-card-title">Дерматология</h3>
+          <div class="dep-image">
+            <img src="assets/icons/departments/dermo.svg" alt="иконка лапки" />
+          </div>
+          <span class="dep-card-span">26 услуг</span>
+        </div>
+        <div class="dep-card dep-card6">
+          <h3 class="dep-card-title">Офтальмология</h3>
+          <div class="dep-image">
+            <img
+              src="assets/icons/departments/ophthalmology.svg"
+              alt="иконка котика с перевязанным глазом"
+            />
+          </div>
+          <span class="dep-card-span">26 услуг</span>
+        </div>
+        <div class="dep-card dep-card7">
+          <h3 class="dep-card-title">Кардиология</h3>
+          <div class="dep-image">
+            <img
+              src="assets/icons/departments/cardio.svg"
+              alt="иконка сердца"
+            />
+          </div>
+          <span class="dep-card-span">26 услуг</span>
+        </div>
+        <div class="dep-card dep-card8">
+          <h3 class="dep-card-title">Стоматология</h3>
+          <div class="dep-image">
+            <img
+              src="assets/icons/departments/dentistry.svg"
+              alt="иконка собачей пасти"
+            />
+          </div>
+          <span class="dep-card-span">26 услуг</span>
+        </div>
+        <div class="dep-card dep-card9">
+          <h3 class="dep-card-title">Репродуктология</h3>
+          <div class="dep-image">
+            <img
+              src="assets/icons/departments/repro.svg"
+              alt="иконка двух песиков"
+            />
+          </div>
+          <span class="dep-card-span">26 услуг</span>
+        </div>
+        <div class="dep-card dep-card10">
+          <h3 class="dep-card-title">Визуальная диагностика</h3>
+          <div class="dep-image">
+            <img src="assets/icons/departments/visual.svg" alt="иконка врача" />
+          </div>
+          <span class="dep-card-span">26 услуг</span>
+        </div>
+        <div class="dep-card dep-card11">
+          <h3 class="dep-card-title">Лаборатория</h3>
+          <div class="dep-image">
+            <img
+              src="assets/icons/departments/lab.svg"
+              alt="иконка двух пробирок"
+            />
+          </div>
+          <span class="dep-card-span">26 услуг</span>
+        </div>
+        <div class="dep-card dep-card12">
+          <h3 class="dep-card-title">Онкология</h3>
+          <div class="dep-image">
+            <img src="assets/icons/departments/onco.svg" alt="иконка шприца" />
+          </div>
+          <span class="dep-card-span">26 услуг</span>
+        </div>
+        <div class="dep-card dep-card13">
+          <h3 class="dep-card-title">Эндокринология</h3>
+          <div class="dep-image">
+            <img
+              src="assets/icons/departments/endocr.svg"
+              alt="иконка легких"
+            />
+          </div>
+          <span class="dep-card-span">26 услуг</span>
+        </div>
+        <div class="dep-card dep-card14">
+          <h3 class="dep-card-title">Экзотические животные</h3>
+          <div class="dep-image">
+            <img
+              src="assets/icons/departments/exotic.svg"
+              alt="иконка ящерицы"
+            />
+          </div>
+          <span class="dep-card-span">26 услуг</span>
+        </div>
+        <div class="dep-card dep-card15">
+          <h3 class="dep-card-title">Аптека</h3>
+          <div class="dep-image">
+            <img
+              src="assets/icons/departments/pharmacy.png"
+              alt="иконка таблеток"
+            />
+          </div>
+          <span class="dep-card-span">26 услуг</span>
+        </div>
+        <div class="dep-card dep-card16">
+          <h3 class="dep-card-title">Груминг</h3>
+          <div class="dep-image">
+            <img
+              src="assets/icons/departments/grooming.svg"
+              alt="иконка расчески и ножниц"
+            />
+          </div>
+          <span class="dep-card-span">26 услуг</span>
+        </div>
+      </section>
+      <div class="history-employees">
+        <section class="history-section">
+          <h2 class="subtitle">История компании</h2>
+          <p>
+            История компании начинается 14 января 1999 года, когда было
+            образовано ООО «Чижи». Идея пришла, т.к. у основателя компании
+            Прозор Жанны Георгиевны была собака боксёр по кличке Бард…
+          </p>
+          <a href="#" class="read-more">ЧИТАТЬ ДАЛЕЕ &gt;</a>
+        </section>
+        <section class="employees">
+          <h2 class="subtitle">Наши специалисты</h2>
+          <div class="employees-slider">
+            <button class="button-slider button-slider1">
+              <img
+                src="assets/pictures/employees/prev.png"
+                alt="иконки стрелки влево"
+              />
+            </button>
+            <a href="#" class="photo-link">
+              <img
+                src="assets/pictures/employees/empl1.png"
+                alt="фото хирургов за операцией"
+              />
+            </a>
+            <a href="#" class="photo-link">
+              <img
+                src="assets/pictures/employees/empl2.png"
+                alt="фото человека с лошадью"
+              />
+            </a>
+            <a href="#" class="photo-link">
+              <img
+                src="assets/pictures/employees/empl1.png"
+                alt="фото хирургов за операцией"
+              />
+            </a>
+            <a href="#" class="photo-link">
+              <img
+                src="assets/pictures/employees/empl3.png"
+                alt="фото хирурга за операцией"
+              />
+            </a>
+            <a href="#" class="photo-link">
+              <img
+                src="assets/pictures/employees/empl3.png"
+                alt="фото хирурга за операцией"
+              />
+            </a>
+            <a href="#" class="photo-link">
+              <img
+                src="assets/pictures/employees/empl3.png"
+                alt="фото хирурга за операцией"
+              />
+            </a>
+            <button class="button-slider button-slider2">
+              <img
+                src="assets/pictures/employees/next.svg"
+                alt="иконки стрелки вправо"
+              />
+            </button>
+          </div>
+          <a href="#" class="read-more">ПОСМОТРЕТЬ ВСЕХ &gt;</a>
+        </section>
+      </div>
+      <section class="inform-banner">
+        <!-- <div class="inform-banner-wrap"> -->
+        <h2 id="inform-subtitle">1 150 000</h2>
+        <p class="inform-p">питомцам мы помогли за 18 лет работы</p>
+        <div class="inform-img-container">
+          <img src="assets/pictures/bird.png" alt="фото желтой птицы" />
+        </div>
+        <!-- </div> -->
+      </section>
+      <section class="pro-cards-section">
+        <h2 class="subtitle">Почему хозяева выбирают нас?</h2>
+        <div class="pro-cards">
+          <div class="pro-card">
+            <h3 class="card-title pro-card-title">Работаем круглосуточно</h3>
+            <div class="pro-img-container">
+              <img
+                src="assets/icons/pro-cars/twenty-four-seven.svg"
+                alt="иконка 24/7"
+              />
+            </div>
+            <p class="pro-card-description description">
+              Мы готовы в любое время суток принять домашних питомцев и их
+              хозяев
+            </p>
+          </div>
+          <div class="pro-card">
+            <h3 class="card-title pro-card-title">Широкий спектр услуг</h3>
+            <div class="pro-img-container">
+              <img
+                src="assets/icons/pro-cars/services.svg"
+                alt="иконка с собакой и котом"
+              />
+            </div>
+            <p class="pro-card-description description">
+              Кроме широкопрофильных докторов в клинике развиты узкие
+              направления в ветеринарии – офтальмология, стоматология,
+              дерматология, травматология, ортопедия и онкология
+            </p>
+          </div>
+          <div class="pro-card">
+            <h3 class="card-title pro-card-title">Большой опыт</h3>
+            <div class="pro-img-container">
+              <img
+                src="assets/icons/pro-cars/experience.svg"
+                alt="иконка с рукой держащей стетоскоп"
+              />
+            </div>
+            <p class="pro-card-description description">
+              30 высококвалифицированных врачей нашей клиники предоставляют
+              ветеринарную помощь уже на протяжении 18 лет!
+            </p>
+          </div>
+          <div class="pro-card">
+            <h3 class="card-title pro-card-title">Собственная лаборатория</h3>
+            <div class="pro-img-container">
+              <img
+                src="assets/icons/pro-cars/own-lab.svg"
+                alt="иконка с конической колбой"
+              />
+            </div>
+            <p class="pro-card-description description">
+              Оборудованная профессиональным оснащением производства компании
+              IDEXX International Inc.(США), которое позволяет получить
+              результаты исследования прямо на приеме
+            </p>
+          </div>
+          <div class="pro-card">
+            <h3 class="card-title pro-card-title">Оснащенные стационары</h3>
+            <div class="pro-img-container">
+              <img
+                src="assets/icons/pro-cars/hospital-rooms.svg"
+                alt="иконка с домиком"
+              />
+            </div>
+            <p class="pro-card-description description">
+              Обычный и инфекционный стационар с индивидуальным подогревом
+              каждой клетки. Для питомцев в критическом состоянии предусмотрены
+              кислородные камеры
+            </p>
+          </div>
+          <div class="pro-card">
+            <h3 class="card-title pro-card-title">Новейшее оборудование</h3>
+            <div class="pro-img-container">
+              <img
+                src="assets/icons/pro-cars/equipment.svg"
+                alt="иконка с микроскопом"
+              />
+            </div>
+            <p class="pro-card-description description">
+              Помимо лабораторного оборудования и цифрового рентгена в клинике
+              используется современный эндоскоп KARL STORZ
+            </p>
+          </div>
+          <div class="pro-card">
+            <h3 class="card-title pro-card-title">Запись на прием онлайн</h3>
+            <div class="pro-img-container empty"></div>
+            <p class="pro-card-description description">
+              Запись на приём позволяет избежать ожиданий в очереди, но если вы
+              не можете приехать - мы выезжаем на дом!
+            </p>
+          </div>
+          <div class="pro-card">
+            <h3 class="card-title pro-card-title">Аптека и зоомагазин</h3>
+            <div class="pro-img-container">
+              <img
+                src="assets/icons/pro-cars/pharmacy.svg"
+                alt="иконка с двумя таблетками"
+              />
+            </div>
+            <p class="pro-card-description description">
+              Для удобства в клинике предусмотрен аптечный пункт, а также бутик
+              с одеждой и косметическими средствами для ухода за домашними
+              любимцами
+            </p>
+          </div>
+          <div class="pro-card">
+            <h3 class="card-title pro-card-title">Груминг-салон</h3>
+            <div class="pro-img-container">
+              <img
+                src="assets/icons/pro-cars/groomimg.svg"
+                alt="иконка с ножницами"
+              />
+            </div>
+            <p class="pro-card-description description">
+              Отдельный кабинет для проведения гигиенческих и косметических
+              процедур, таких как мытьё и сушка, стрижка или тримминг, уход за
+              ушами, глазами и когтями и многое другое
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="app-store-banner">
+        <span class="app-store-banner-span">скоро</span>
+        <div class="title-app-links">
+          <h2 id="app-store-banner-title">
+            Удобное приложение для питомцев и <br />
+            их хозяев
+          </h2>
+          <div class="app-store-links">
+            <a href="#" class="app-store-link">
+              <img
+                src="assets/pictures/app-store-banner/app-store-badge.png"
+                alt="иконка загрузки из App Store"
+                class="app-store-icon1"
+              />
+            </a>
+            <a href="#" class="app-store-link">
+              <img
+                src="assets/pictures/app-store-banner/google-play-badge.png"
+                alt="иконка загрузки из Google Play"
+                class="app-store-icon2"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="app-store-pics">
+          <img
+            src="assets/pictures/app-store-banner/dog2.png"
+            alt="фото собаки"
+            class="dog-img"
+          />
+          <img
+            src="assets/pictures/app-store-banner/phone-screen.png"
+            alt="картинка экрана телефона с формой для входа в приложение"
+            class="phone-img"
+          />
+        </div>
+      </section>
+      <section class="contacts-banner">
+        <h2 class="subtitle">Контакты</h2>
+        <div class="address-container-wrapper">
+          <div class="address-container1">
+            <h3 class="address-container-subtitle">
+              Айболит на Краснополянской
+            </h3>
+            <div class="address-phone-hours">
+              <div class="address">
+                <img
+                  src="assets/icons/ic_location.svg"
+                  alt="иконка локации"
+                  class="address-icon"
+                />
+                <span class="description"
+                  >Дзержинский район, <br />ул. Краснополянская, 30</span
+                >
+              </div>
+              <div class="phone">
+                <img
+                  src="assets/icons/ic_phone.svg"
+                  alt="иконка телефона"
+                  class="phone-icon"
+                />
+                <span class="description">96 22 92</span>
+              </div>
+              <div class="hours">
+                <img
+                  src="assets/icons/ic_clock.svg"
+                  alt="иконка с часами"
+                  class="clock-icon"
+                />
+                <span class="description">Круглосуточно</span>
+              </div>
+            </div>
+          </div>
+          <div class="address-container2">
+            <h3 class="address-container-subtitle">Айболит на Тулака</h3>
+            <div class="address-phone-hours">
+              <div class="address">
+                <img
+                  src="assets/icons/ic_location.svg"
+                  alt="ииконка локации"
+                  class="address-icon"
+                />
+                <span class="description"
+                  >Советский район, <br />ул. Карла Маркса, 7</span
+                >
+              </div>
+              <div class="phone">
+                <img
+                  src="assets/icons/ic_phone.svg"
+                  alt="иконка телефона"
+                  class="phone-icon"
+                />
+                <span class="description">96 22 92</span>
+              </div>
+              <div class="hours">
+                <img
+                  src="assets/icons/ic_clock.svg"
+                  alt="иконка с часами"
+                  class="clock-icon"
+                />
+                <span class="description">Круглосуточно</span>
+              </div>
+            </div>
+          </div>
+          <div class="map-link-container">
+            <a href="#" class="map-link">
+              <img
+                src="assets/pictures/map.png"
+                alt="фотография карты с отмеченными адресами клиники"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

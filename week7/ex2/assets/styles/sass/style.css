@@ -1,0 +1,506 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #fffefe;
+  width: 100%;
+}
+
+.first-line {
+  width: 90%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-areas: "logo navigation city";
+  align-items: center;
+  justify-items: start;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  line-height: 100%;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  color: #c3b9b5;
+}
+.first-line .logo-container-header {
+  grid-area: logo;
+  width: 30%;
+}
+.first-line .logo-container-header .logo {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.first-line .header-nav {
+  grid-area: navigation;
+  width: 100%;
+}
+.first-line .header-nav .nav-list {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-items: start;
+}
+.first-line .city-header {
+  grid-area: city;
+  justify-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.first-line .city-header .address-icon-header {
+  width: 20%;
+}
+.first-line .city-header .city {
+  border: none;
+  background-color: #fffefe;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  line-height: 100%;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  color: #ffc59e;
+}
+
+.page-nav-header-banner {
+  margin-top: 5%;
+  margin-left: 4.5%;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+}
+.page-nav-header-banner .page-nav {
+  height: 70%;
+  margin-left: 20%;
+  display: grid;
+  grid-template-columns: auto;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  line-height: 100%;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: 0.9vw;
+  color: #c3b9b5;
+}
+.page-nav-header-banner .header-banner {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+}
+.page-nav-header-banner .header-banner .left-header-banner {
+  display: grid;
+  grid-template-rows: auto;
+  align-items: center;
+}
+.page-nav-header-banner .header-banner .left-header-banner .title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  align-self: start;
+  color: #080606;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: 6vw;
+  line-height: 137.5%;
+}
+.page-nav-header-banner .header-banner .left-header-banner .appointment-form-link {
+  margin-bottom: 5%;
+  width: 40%;
+  height: 50%;
+  align-self: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  line-height: 100%;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: 1vw;
+  border-radius: 2rem;
+  background: #ffc59e;
+  box-shadow: 0px 4px 20px 0px #ffc59e;
+}
+.page-nav-header-banner .header-banner .left-header-banner .social-links {
+  width: 60%;
+  display: grid;
+  align-self: start;
+  grid-template-columns: repeat(4, 1fr);
+}
+.page-nav-header-banner .header-banner .left-header-banner .social-links .social-link {
+  width: 50%;
+}
+.page-nav-header-banner .header-banner .left-header-banner .social-links .social-link .social-icon {
+  width: 100%;
+  height: 100%;
+  max-width: 310px;
+}
+.page-nav-header-banner .header-banner .right-header-banner {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-items: end;
+  align-items: end;
+}
+.page-nav-header-banner .header-banner .right-header-banner .header-banner-img-container1 {
+  grid-row: 1/3;
+  grid-column: 1/3;
+  width: 75%;
+}
+.page-nav-header-banner .header-banner .right-header-banner .header-banner-img-container1 .header-banner-img1 {
+  width: 100%;
+}
+.page-nav-header-banner .header-banner .right-header-banner .header-banner-img-container2 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  width: 60%;
+  justify-self: center;
+}
+.page-nav-header-banner .header-banner .right-header-banner .header-banner-img-container2 .header-banner-img2 {
+  width: 100%;
+}
+.page-nav-header-banner .header-banner .right-header-banner .phone-link {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  align-self: end;
+  justify-self: center;
+  margin-bottom: 25%;
+  color: #59443f;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  line-height: 100%;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: 1.2vw;
+}
+
+.dep-cards {
+  margin: 8% 15% 8% 13%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 34px;
+}
+.dep-cards .dep-card {
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 3px 3px 10px rgb(215, 213, 213);
+}
+.dep-cards .dep-card .dep-card-title {
+  grid-row: 1/2;
+  grid-column: 1/3;
+  color: #59443f;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: clamp(1.25rem, 2.25vw, 2.4rem);
+  line-height: 133.333%;
+}
+.dep-cards .dep-card .dep-image {
+  grid-row: 2/4;
+  grid-column: 2/3;
+  width: 90%;
+  max-width: 100px;
+  justify-self: center;
+}
+.dep-cards .dep-card .dep-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.dep-cards .dep-card .dep-card-span {
+  grid-row: 3/4;
+  grid-column: 1/2;
+  padding-bottom: 30%;
+  color: #59443f;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  line-height: 100%;
+}
+
+.history-employees {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  background-color: #fbf8f8;
+  text-align: center;
+}
+.history-employees .history-section {
+  margin: auto;
+}
+.history-employees .history-section .subtitle {
+  padding-bottom: 40px;
+  color: #080606;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: clamp(1.2rem, 3vw, 3rem);
+  line-height: 100%;
+}
+.history-employees .history-section p {
+  margin: auto;
+  padding-bottom: 20px;
+  width: 40%;
+  text-align: left;
+  color: #59443f;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  line-height: 150%;
+}
+.history-employees .employees {
+  padding-top: 5%;
+}
+.history-employees .employees .subtitle {
+  padding-bottom: 40px;
+  color: #080606;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: clamp(1.2rem, 3vw, 3rem);
+  line-height: 100%;
+}
+.history-employees .employees .employees-slider {
+  margin: auto;
+  padding-bottom: 20px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto repeat(6, auto) auto;
+  gap: 10px;
+}
+.history-employees .employees .employees-slider .button-slider {
+  border: none;
+  width: 70%;
+  background-color: #fbf8f8;
+}
+.history-employees .employees .employees-slider .button-slider img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.history-employees .employees .employees-slider .button-slider1 {
+  justify-self: end;
+}
+.history-employees .employees .employees-slider .button-slider1 img {
+  margin-right: -50%;
+}
+.history-employees .employees .employees-slider .button-slider2 {
+  justify-self: end;
+}
+.history-employees .employees .employees-slider .button-slider2 img {
+  margin-left: -130%;
+}
+.history-employees .employees .employees-slider .photo-link {
+  width: 100%;
+}
+.history-employees .employees .employees-slider .photo-link img {
+  width: 100%;
+}
+
+.read-more {
+  color: #ffc59e;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  line-height: 100%;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+}
+
+.inform-banner {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  margin: auto;
+  width: 50%;
+  position: relative;
+  text-align: center;
+}
+.inform-banner #inform-subtitle {
+  margin-bottom: 3%;
+  color: #59443f;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: clamp(4rem, 12vw, 13rem);
+  line-height: 76.389%;
+}
+.inform-banner .inform-p {
+  margin: auto;
+  width: 85%;
+  text-align: left;
+  color: #080606;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: clamp(1.75rem, 4vw, 5rem);
+  line-height: 137.5%;
+}
+.inform-banner .inform-img-container {
+  width: 50%;
+  position: absolute;
+  left: 37%;
+  top: 67%;
+  z-index: -1;
+}
+.inform-banner .inform-img-container img {
+  width: 100%;
+}
+
+.pro-cards-section {
+  margin: 15% 0% 10%;
+}
+.pro-cards-section .subtitle {
+  padding-bottom: 7%;
+  text-align: center;
+  color: #080606;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: clamp(1.2rem, 3vw, 3rem);
+  line-height: 100%;
+}
+.pro-cards-section .pro-cards {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pro-cards-section .pro-cards .pro-card {
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 0.8fr 4.2fr;
+  gap: 5px;
+  grid-template-areas: "title title" "img-container description";
+  align-items: start;
+}
+.pro-cards-section .pro-cards .pro-card .pro-card-title {
+  grid-area: title;
+  color: #59443f;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: clamp(1.25rem, 2.25vw, 2.4rem);
+  line-height: 133.333%;
+}
+.pro-cards-section .pro-cards .pro-card .pro-img-container {
+  grid-area: img-container;
+  width: 80%;
+  align-self: center;
+}
+.pro-cards-section .pro-cards .pro-card .pro-img-container img {
+  width: 100%;
+  margin: auto;
+}
+.pro-cards-section .pro-cards .pro-card .pro-card-description {
+  grid-area: description;
+  width: 100%;
+}
+
+.description {
+  color: #59443f;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  line-height: 150%;
+}
+
+.app-store-banner {
+  padding: 5% 5% 5% 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, auto);
+  align-items: start;
+  background-color: #ffc59e;
+  color: #fff;
+}
+.app-store-banner .app-store-banner-span {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  font-size: clamp(1.25rem, 2.25vw, 2.4rem);
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  line-height: 66.667%;
+}
+.app-store-banner .title-app-links {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.app-store-banner .title-app-links #app-store-banner-title {
+  width: 110%;
+  font-size: clamp(1rem, 5vw, 5rem);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  line-height: 137.5%;
+}
+.app-store-banner .title-app-links .app-store-links {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.app-store-banner .title-app-links .app-store-links .app-store-link {
+  width: 90%;
+}
+.app-store-banner .title-app-links .app-store-links .app-store-link .app-store-icon1 {
+  width: 91%;
+}
+.app-store-banner .title-app-links .app-store-links .app-store-link .app-store-icon2 {
+  width: 100%;
+}
+.app-store-banner .app-store-pics {
+  grid-row: 2/4;
+  grid-column: 2/3;
+  align-self: end;
+  position: relative;
+  width: 80%;
+}
+.app-store-banner .app-store-pics .dog-img {
+  margin-top: 15%;
+  width: 80%;
+  position: relative;
+  right: 15%;
+}
+.app-store-banner .app-store-pics .phone-img {
+  width: 65%;
+  position: absolute;
+  bottom: -6%;
+  left: 35%;
+}/*# sourceMappingURL=style.css.map */
