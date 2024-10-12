@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+  font-weight: bold;
+  font-size: clamp(0.5rem, 2.2vw, 2rem);
+}
+
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 0.5fr 3fr 1fr;
+}
+
+.header {
+  display: grid;
+}
+
+.header-title {
+  margin: auto;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1.8fr 1.2fr;
+}
+
+.main-part {
+  background-color: rgb(248, 236, 219);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.main-title {
+  margin: auto;
+}
+
+.else {
+  padding: 10px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+}
+
+.else1,
+.else2 {
+  width: 90%;
+}
+
+.else3 {
+  grid-column: span 2;
+  width: 95%;
+}
+
+.else1,
+.else2,
+.else3 {
+  background-color: rgb(247, 227, 187);
+  padding: 2rem 0em;
+  text-align: center;
+}
+
+.aside {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-color: rgb(203, 229, 176);
+}
+
+.sidebar {
+  margin: auto;
+}
+
+.footer {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-content {
+  padding: 1.5rem 1em;
+  background-color: white;
+}
+
+@media screen and (max-width: 415px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .grid-container {
+    height: auto;
+    grid-template-rows: 0.2fr 3.8fr 1fr;
+    /* grid-template-rows: auto; */
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.2fr 0.8fr;
+  }
+
+  .main-part {
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .else {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .else2 {
+    grid-row: 2/3;
+  }
+
+  .else3 {
+    grid-column: 1/2;
+  }
+
+  .else1,
+  .else2,
+  .else3 {
+    width: 90%;
+    padding: 1rem 0em;
+  }
+
+  .footer {
+    /* padding: 10px; */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+
+  .footer-content {
+    width: 90%;
+    text-align: center;
+    padding: 0.5rem 1em;
+  }
+}
