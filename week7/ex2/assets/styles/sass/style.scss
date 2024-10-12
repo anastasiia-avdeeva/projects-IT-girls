@@ -2,12 +2,18 @@ $font-brown: #59443f;
 $font-light-brown: #c3b9b5;
 $orange: #ffc59e;
 $almost-black: #080606;
-$font-size-20: clamp(0.8rem, 1.5vw, 1.5rem);
-$font-size-30: clamp(1.25rem, 2.25vw, 2.4rem);
+// $font-size-20: clamp(0.8rem, 1.5vw, 1.5rem);
+// $font-size-30: clamp(1.25rem, 2.25vw, 2.4rem);
 // $font-size-40: calc(40px * $font-size-20 / 20px);
-$font-size-50: clamp(1.75rem, 4vw, 5rem);
-$font-size-80: clamp(2rem, 6vw, 7rem);
-$font-size-144: clamp(4rem, 12vw, 13rem);
+// $font-size-50: clamp(1.75rem, 4vw, 5rem);
+// $font-size-80: clamp(2rem, 6vw, 7rem);
+// $font-size-144: clamp(4rem, 12vw, 13rem);
+$font-size-20: 1rem;
+$font-size-30: 1.5rem;
+$font-size-40: 2rem;
+$font-size-50: 2.5rem;
+$font-size-80: 4rem;
+$font-size-144: 7.2rem;
 
 @mixin all_fonts {
   font-style: normal;
@@ -41,10 +47,14 @@ $font-size-144: clamp(4rem, 12vw, 13rem);
 @mixin font-subtitle-h2 {
   color: $almost-black;
   @include font-garamond-400;
-  font-size: clamp(1.2rem, 3vw, 3rem);
+  //   font-size: clamp(1.2rem, 3vw, 3rem);
+  font-size: 2rem;
   line-height: 100%;
 }
 
+html {
+  font-size: 20px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -63,8 +73,8 @@ ul {
 body {
   background-color: #fffefe;
   width: 100%;
-  //   display: grid;
-  //   grid-template-rows: auto;
+  display: grid;
+  grid-template-rows: auto;
 }
 
 .first-line {
@@ -76,7 +86,8 @@ body {
   align-items: center;
   justify-items: start;
   @include font-jost-700;
-  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  //   font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  font-size: 1rem;
   color: $font-light-brown;
 
   .logo-container-header {
