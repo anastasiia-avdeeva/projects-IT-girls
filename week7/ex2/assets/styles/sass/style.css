@@ -1,7 +1,3 @@
-html {
-  font-size: 20px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -25,19 +21,17 @@ body {
 }
 
 .first-line {
-  width: 90%;
-  margin: 20px auto;
+  margin: 20px 5%;
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-areas: "logo navigation city";
   align-items: center;
-  justify-items: start;
   font-family: "Jost", sans-serif;
   font-weight: 700;
   line-height: 100%;
   font-style: normal;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.3vw, 2.5rem);
   color: #c3b9b5;
 }
 .first-line .logo-container-header {
@@ -52,7 +46,6 @@ body {
 }
 .first-line .header-nav {
   grid-area: navigation;
-  width: 100%;
 }
 .first-line .header-nav .nav-list {
   display: grid;
@@ -61,13 +54,20 @@ body {
 }
 .first-line .city-header {
   grid-area: city;
+  width: 100%;
   justify-self: end;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
-.first-line .city-header .address-icon-header {
-  width: 20%;
+.first-line .city-header .address-icon-header-wrap {
+  max-width: 20%;
+}
+.first-line .city-header .address-icon-header-wrap .address-icon-header {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .first-line .city-header .city {
   border: none;
@@ -84,11 +84,11 @@ body {
   margin-top: 5%;
   margin-left: 4.5%;
   display: grid;
-  grid-template-columns: 1fr 6fr;
+  grid-template-columns: 1fr 5fr;
 }
 .page-nav-header-banner .page-nav {
-  height: 70%;
-  margin-left: 20%;
+  max-height: 90%;
+  margin-left: 10%;
   display: grid;
   grid-template-columns: auto;
   font-family: "Jost", sans-serif;
@@ -96,12 +96,12 @@ body {
   line-height: 100%;
   font-style: normal;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 0.9vw;
+  font-size: clamp(1rem, 1.3vw, 2.5rem);
   color: #c3b9b5;
 }
 .page-nav-header-banner .header-banner {
   display: grid;
-  grid-template-columns: 0.7fr 1.3fr;
+  grid-template-columns: 1fr 1fr;
 }
 .page-nav-header-banner .header-banner .left-header-banner {
   display: grid;
@@ -117,14 +117,13 @@ body {
   font-weight: 400;
   font-style: normal;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 6vw;
+  font-size: clamp(2.5rem, 5vw, 8rem);
   line-height: 137.5%;
 }
 .page-nav-header-banner .header-banner .left-header-banner .appointment-form-link {
-  margin-bottom: 5%;
-  width: 40%;
-  height: 50%;
-  align-self: start;
+  margin-bottom: 20%;
+  width: 35%;
+  height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,9 +139,8 @@ body {
   box-shadow: 0px 4px 20px 0px #ffc59e;
 }
 .page-nav-header-banner .header-banner .left-header-banner .social-links {
-  width: 60%;
+  width: 50%;
   display: grid;
-  align-self: start;
   grid-template-columns: repeat(4, 1fr);
 }
 .page-nav-header-banner .header-banner .left-header-banner .social-links .social-link {
@@ -155,34 +153,34 @@ body {
 }
 .page-nav-header-banner .header-banner .right-header-banner {
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-columns: 0.5fr 1.5fr 1fr;
+  grid-auto-rows: auto;
   justify-items: end;
-  align-items: end;
 }
 .page-nav-header-banner .header-banner .right-header-banner .header-banner-img-container1 {
-  grid-row: 1/3;
-  grid-column: 1/3;
-  width: 75%;
+  grid-row: 1/4;
+  grid-column: 2/4;
+  width: 93%;
 }
 .page-nav-header-banner .header-banner .right-header-banner .header-banner-img-container1 .header-banner-img1 {
   width: 100%;
 }
 .page-nav-header-banner .header-banner .right-header-banner .header-banner-img-container2 {
-  grid-row: 2/3;
-  grid-column: 1/2;
-  width: 60%;
+  grid-row: 2/4;
+  grid-column: 1/3;
+  width: 70%;
   justify-self: center;
 }
 .page-nav-header-banner .header-banner .right-header-banner .header-banner-img-container2 .header-banner-img2 {
-  width: 100%;
+  width: 80%;
 }
 .page-nav-header-banner .header-banner .right-header-banner .phone-link {
-  grid-row: 2/3;
-  grid-column: 2/3;
-  align-self: end;
-  justify-self: center;
-  margin-bottom: 25%;
+  grid-row: 3/4;
+  grid-column: 3/4;
+  align-self: center;
+  margin-bottom: 40%;
+  margin-right: 10%;
+  width: 100%;
   color: #59443f;
   font-family: "Jost", sans-serif;
   font-weight: 700;
@@ -201,6 +199,7 @@ body {
 }
 .dep-cards .dep-card {
   padding-left: 10px;
+  padding-top: 20px;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(3, auto);
@@ -216,7 +215,7 @@ body {
   font-weight: 400;
   font-style: normal;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.5vw, 3rem);
   line-height: 133.333%;
 }
 .dep-cards .dep-card .dep-image {
@@ -237,7 +236,7 @@ body {
   grid-column: 1/2;
   padding-bottom: 30%;
   color: #59443f;
-  font-size: 1rem;
+  font-size: clamp(0.5rem, 0.9vw, 2rem);
   font-family: "Jost", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -261,12 +260,12 @@ body {
   font-weight: 400;
   font-style: normal;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 2rem;
   line-height: 100%;
+  font-size: clamp(2rem, 3vw, 4rem);
 }
 .history-employees .history-section p {
   margin: auto;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   width: 40%;
   text-align: left;
   color: #59443f;
@@ -274,7 +273,7 @@ body {
   font-weight: 400;
   font-style: normal;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.3vw, 2.5rem);
   line-height: 150%;
 }
 .history-employees .employees {
@@ -287,13 +286,13 @@ body {
   font-weight: 400;
   font-style: normal;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 2rem;
   line-height: 100%;
+  font-size: clamp(2rem, 3vw, 4rem);
 }
 .history-employees .employees .employees-slider {
   margin: auto;
-  padding-bottom: 20px;
-  width: 90%;
+  padding-bottom: 30px;
+  max-width: 90%;
   display: grid;
   grid-template-columns: auto repeat(6, auto) auto;
   gap: 10px;
@@ -326,6 +325,9 @@ body {
 }
 .history-employees .employees .employees-slider .photo-link img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .read-more {
@@ -335,52 +337,54 @@ body {
   line-height: 100%;
   font-style: normal;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.3vw, 2.5rem);
 }
 
 .inform-banner {
-  padding-top: 10%;
-  padding-bottom: 10%;
-  margin: auto;
-  width: 50%;
-  position: relative;
+  margin-top: 10%;
+  margin-bottom: 10%;
   text-align: center;
 }
-.inform-banner #inform-subtitle {
-  margin-bottom: 3%;
+.inform-banner .inform-banner-wrap {
+  margin-left: 35%;
+  margin-right: 35%;
+  width: 30%;
+  position: relative;
+}
+.inform-banner .inform-banner-wrap #inform-subtitle {
+  margin-bottom: 8%;
   color: #59443f;
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
   font-style: normal;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 7.2rem;
+  font-size: clamp(5rem, 8vw, 10rem);
   line-height: 76.389%;
 }
-.inform-banner .inform-p {
-  margin: auto;
-  width: 85%;
+.inform-banner .inform-banner-wrap .inform-p {
+  padding-left: 5%;
   text-align: left;
   color: #080606;
   font-family: "Jost", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 2.5rem;
-  line-height: 137.5%;
+  font-size: 2.8vw;
+  line-height: 150%;
 }
-.inform-banner .inform-img-container {
+.inform-banner .inform-banner-wrap .inform-img-container {
   width: 50%;
-  position: absolute;
-  left: 37%;
-  top: 67%;
-  z-index: -1;
+  margin: -10%;
+  position: relative;
+  left: 55%;
+  margin-bottom: 10%;
 }
-.inform-banner .inform-img-container img {
+.inform-banner .inform-banner-wrap .inform-img-container img {
   width: 100%;
 }
 
 .pro-cards-section {
-  margin: 15% 0% 10%;
+  margin-bottom: 10%;
 }
 .pro-cards-section .subtitle {
   padding-bottom: 7%;
@@ -390,53 +394,49 @@ body {
   font-weight: 400;
   font-style: normal;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 2rem;
   line-height: 100%;
+  font-size: clamp(2rem, 3vw, 4rem);
 }
 .pro-cards-section .pro-cards {
-  margin: auto;
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  width: 85vw;
+  margin: 0% 12.5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 25vw));
+  justify-content: center;
+  gap: 40px;
 }
 .pro-cards-section .pro-cards .pro-card {
-  flex: 1 1 calc(33.33% - 20px);
-  max-width: calc(33.33% - 20px);
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 0.8fr 4.2fr;
-  gap: 5px;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: repeat(3, auto);
+  gap: 5%;
   grid-template-areas: "title title" "img-container description";
   align-items: start;
 }
 .pro-cards-section .pro-cards .pro-card .pro-card-title {
   grid-area: title;
+  font-size: clamp(1.5rem, 1.5vw, 3rem);
   color: #59443f;
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
   font-style: normal;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 1.5rem;
   line-height: 133.333%;
 }
 .pro-cards-section .pro-cards .pro-card .pro-img-container {
   grid-area: img-container;
-  width: 80%;
-  align-self: center;
+  width: 5vw;
 }
 .pro-cards-section .pro-cards .pro-card .pro-img-container img {
   width: 100%;
-  margin: auto;
 }
 .pro-cards-section .pro-cards .pro-card .pro-card-description {
   grid-area: description;
-  width: 100%;
 }
 
 .description {
   color: #59443f;
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.3vw, 2.5rem);
   font-family: "Jost", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -445,7 +445,7 @@ body {
 }
 
 .app-store-banner {
-  padding: 5% 5% 5% 5%;
+  padding: 10% 5% 5% 15%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(2, auto);
@@ -456,7 +456,7 @@ body {
 .app-store-banner .app-store-banner-span {
   grid-row: 1/2;
   grid-column: 1/2;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.5vw, 3rem);
   font-family: "Jost", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -469,7 +469,7 @@ body {
 }
 .app-store-banner .title-app-links #app-store-banner-title {
   width: 110%;
-  font-size: clamp(1rem, 5vw, 5rem);
+  font-size: clamp(2.5rem, 5vw, 8rem);
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
   font-style: normal;
@@ -509,4 +509,183 @@ body {
   position: absolute;
   bottom: -6%;
   left: 35%;
+}
+
+.contacts-banner {
+  margin: 10% 5% 5% 15%;
+}
+.contacts-banner .subtitle {
+  margin-bottom: 5%;
+  color: #080606;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  line-height: 100%;
+  font-size: clamp(2rem, 3vw, 4rem);
+}
+.contacts-banner .address-container-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "address1 map" "address2 map";
+}
+.contacts-banner .address-container-wrapper .address-container-subtitle {
+  margin-bottom: 5%;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: clamp(1.5rem, 1.5vw, 3rem);
+  line-height: 133.333%;
+}
+.contacts-banner .address-container-wrapper .address-container1 {
+  grid-area: address1;
+}
+.contacts-banner .address-container-wrapper .address-container2 {
+  grid-area: address2;
+}
+.contacts-banner .address-container-wrapper .map-link-container {
+  grid-area: map;
+  width: 100%;
+}
+.contacts-banner .address-container-wrapper .map-link-container .map-link {
+  display: block;
+  width: 100%;
+}
+.contacts-banner .address-container-wrapper .map-link-container .map-link img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.address-container1 .description,
+.address-container2 .description {
+  font-size: clamp(0.5rem, 0.9vw, 2rem);
+}
+
+.address-phone-hours {
+  width: 60%;
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+}
+
+.address,
+.phone,
+.hours {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.address-icon,
+.phone-icon,
+.clock-icon {
+  width: 60%;
+}
+
+footer {
+  padding: 1% 7%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  color: #fff;
+  background-color: #59443f;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: clamp(0.5rem, 0.9vw, 2rem);
+}
+footer .logo-and-nav-footer {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+footer .logo-and-nav-footer .logo-container-footer {
+  width: 30%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: min-content;
+  grid-template-areas: "logo name" "logo subname";
+}
+footer .logo-and-nav-footer .logo-container-footer img {
+  margin-right: 10%;
+  grid-area: logo;
+  width: 80%;
+  align-self: center;
+  justify-self: end;
+}
+footer .logo-and-nav-footer .logo-container-footer .name {
+  grid-area: name;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: clamp(1rem, 2.5vw, 3rem);
+  justify-self: start;
+  align-self: end;
+}
+footer .logo-and-nav-footer .logo-container-footer .subname {
+  grid-area: subname;
+  line-height: 100%;
+  align-self: start;
+}
+footer .logo-and-nav-footer nav .footer-nav-list {
+  width: 80%;
+  margin-left: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
+  line-height: 150%;
+}
+footer .logo-and-nav-footer nav .footer-nav-list li:first-child {
+  grid-column: 1/2;
+  grid-row: span 4;
+  margin-right: 25%;
+}
+footer .logo-and-nav-footer nav .footer-nav-list li.second-col {
+  grid-column: 2/3;
+  grid-row: auto;
+}
+footer .logo-and-nav-footer nav .footer-nav-list li.third-col {
+  grid-column: 3/4;
+}
+footer .social-and-apps {
+  width: 80%;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-auto-rows: min-content;
+}
+footer .social-and-apps .apps {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+footer .social-and-apps .apps .app-link-footer {
+  width: 100%;
+}
+footer .social-and-apps .apps .app-link-footer .app-store-foot {
+  width: 88%;
+}
+footer .social-and-apps .apps .app-link-footer .google-play-foot {
+  width: 100%;
+}
+footer .social-and-apps .social-links-foot {
+  display: flex;
+  justify-content: space-between;
+}
+footer .social-and-apps .social-links-foot .social-link-foot {
+  width: 10%;
+}
+footer .social-and-apps .social-links-foot .social-link-foot img {
+  width: 100%;
+}
+footer .social-and-apps .creator-contacts {
+  display: grid;
+  grid-auto-rows: min-content;
+  align-self: start;
+}
+footer .social-and-apps .made_by {
+  align-self: center;
 }/*# sourceMappingURL=style.css.map */

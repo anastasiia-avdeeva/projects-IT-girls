@@ -1,0 +1,34 @@
+@mixin all_fonts {
+  font-style: normal;
+  font-feature-settings: "liga" off, "clig" off;
+}
+@mixin font-jost-700 {
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  line-height: 100%;
+  @include all_fonts;
+}
+
+@mixin font-jost-400 {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  @include all_fonts;
+}
+
+@mixin font-garamond-700 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  @include all_fonts;
+}
+
+@mixin font-garamond-400 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  @include all_fonts;
+}
+
+@mixin font-subtitle-h2 {
+  color: $almost-black;
+  @include font-garamond-400;
+  line-height: 100%;
+}
