@@ -17,7 +17,7 @@ ul {
 }
 
 body {
-  background-color: #fffefe;
+  background-color: $main-background-color;
   width: 100%;
   display: grid;
   grid-template-rows: auto;
@@ -74,9 +74,42 @@ body {
 
     .city {
       border: none;
-      background-color: #fffefe;
+      background-color: $main-background-color;
       @include font-jost-700;
       color: $orange;
+    }
+  }
+
+  .hamburger-menu {
+    visibility: hidden;
+
+    .nav-hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
+      top: 60px;
+      right: -100%;
+      font-size: $font-size-card-title;
+      transition-duration: 0.25s;
+
+      li {
+        display: block;
+        padding: 12px 24px;
+        background-color: $main-background-color;
+        transition-duration: 0.25s;
+
+        .city-hamburger {
+          border: none;
+          background-color: $main-background-color;
+          @include font-jost-700;
+          color: $orange;
+        }
+
+        :hover {
+          background-color: $history-section-background;
+        }
+      }
     }
   }
 }
@@ -245,7 +278,7 @@ body {
 .history-employees {
   padding-top: 10%;
   padding-bottom: 10%;
-  background-color: #fbf8f8;
+  background-color: $history-section-background;
   text-align: center;
 
   .history-section {
@@ -289,7 +322,7 @@ body {
       .button-slider {
         border: none;
         width: 70%;
-        background-color: #fbf8f8;
+        background-color: $history-section-background;
 
         img {
           width: 100%;
@@ -706,6 +739,88 @@ footer {
 
     .made_by {
       align-self: center;
+    }
+  }
+}
+
+// styles for burger menu:
+.first-line {
+  .hamburger-menu {
+    #menu__toggle {
+      display: none;
+    }
+
+    .menu__btn {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+
+      width: 26px;
+      height: 26px;
+
+      cursor: pointer;
+      z-index: 1;
+
+      span,
+      span::before,
+      span::after {
+        display: block;
+        position: absolute;
+
+        width: 100%;
+        height: 4px;
+
+        background-color: $orange;
+
+        transition-duration: 0.25s;
+      }
+      span::before {
+        content: "";
+        top: -8px;
+      }
+      span::after {
+        content: "";
+        top: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .first-line {
+    .header-nav {
+      display: none;
+    }
+    .city-header {
+      display: none;
+    }
+
+    .hamburger-menu {
+      visibility: visible;
+      #menu__toggle:checked {
+        ~ .menu__btn {
+          > span {
+            transform: rotate(45deg);
+
+            &::before {
+              top: 0;
+              transform: rotate(0);
+            }
+
+            &::after {
+              top: 0;
+              transform: rotate(90deg);
+            }
+          }
+        }
+        ~ .nav-hamburger {
+          visibility: visible;
+          right: 0;
+        }
+      }
     }
   }
 }
