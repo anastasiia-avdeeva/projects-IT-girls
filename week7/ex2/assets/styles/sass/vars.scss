@@ -13,3 +13,18 @@ $font-size-smallest: clamp(0.5rem, 0.9vw, 2rem);
 $font-size-h2: clamp(2rem, 3vw, 4rem);
 $font-size-biggest: clamp(5rem, 8vw, 10rem);
 $font-for-logo: clamp(1rem, 2.5vw, 3rem);
+
+$media-tablet-h1-font: clamp(2rem, 6vw, 6rem);
+$media-tablet-regular-font: clamp(1rem, 2.5vw, 3rem);
+$media-tablet-smallest-font: clamp(1rem, 1vw, 2rem);
+$media-tablet-cards-title-font: clamp(1.4rem, 1.4vw, 3rem);
+$media-tablet-cards-biggest-font: clamp(3rem, 7vw, 7rem);
+$media-tablet-address-subtitle-font: clamp(1.3rem, 3.2vw, 4rem);
+$media-tablet-h2-font: clamp(2.2rem, 3.5vw, 5rem);
+
+// footer {
+//   .logo-and-nav-footer {
+
+//     .
+//   }
+// }

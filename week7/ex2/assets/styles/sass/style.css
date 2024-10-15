@@ -730,10 +730,9 @@ footer .social-and-apps .made_by {
   display: flex;
   align-items: center;
   position: fixed;
-  top: 20px;
   right: 20px;
-  width: 26px;
-  height: 26px;
+  width: 6vw;
+  height: auto;
   cursor: pointer;
   z-index: 1;
 }
@@ -743,20 +742,23 @@ footer .social-and-apps .made_by {
   display: block;
   position: absolute;
   width: 100%;
-  height: 4px;
+  height: 0.3em;
   background-color: #ffc59e;
   transition-duration: 0.25s;
 }
 .first-line .hamburger-menu .menu__btn span::before {
   content: "";
-  top: -8px;
+  top: -10px;
 }
 .first-line .hamburger-menu .menu__btn span::after {
   content: "";
-  top: 8px;
+  top: 10px;
 }
 
 @media screen and (max-width: 900px) {
+  .first-line .logo-container-header {
+    width: 10vw;
+  }
   .first-line .header-nav {
     display: none;
   }
@@ -780,5 +782,233 @@ footer .social-and-apps .made_by {
   .first-line .hamburger-menu #menu__toggle:checked ~ .nav-hamburger {
     visibility: visible;
     right: 0;
+  }
+  .page-nav-header-banner {
+    margin-left: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  .page-nav-header-banner .page-nav {
+    display: none;
+  }
+  .page-nav-header-banner .header-banner {
+    grid-template-columns: 1.8fr 1.2fr;
+    grid-template-rows: auto auto;
+  }
+  .page-nav-header-banner .header-banner .left-header-banner {
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+  }
+  .page-nav-header-banner .header-banner .left-header-banner .title {
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    font-size: clamp(2rem, 6vw, 6rem);
+  }
+  .page-nav-header-banner .header-banner .left-header-banner .appointment-form-link {
+    margin-bottom: 0;
+    padding: 0.8em 1em;
+    height: auto;
+    width: 35%;
+    font-size: 2vw;
+  }
+  .page-nav-header-banner .header-banner .left-header-banner .social-links {
+    justify-items: center;
+  }
+  .page-nav-header-banner .header-banner .right-header-banner {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .page-nav-header-banner .header-banner .right-header-banner .header-banner-img-container1 {
+    display: none;
+  }
+  .page-nav-header-banner .header-banner .right-header-banner .header-banner-img-container2 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: end;
+  }
+  .page-nav-header-banner .header-banner .right-header-banner .header-banner-img-container2 .header-banner-img2 {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .page-nav-header-banner .header-banner .right-header-banner .phone-link {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: end;
+    margin: 0;
+    font-size: clamp(1rem, 2.5vw, 3rem);
+  }
+  main .dep-cards {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    margin: 5% 10%;
+    gap: 15px;
+  }
+  main .dep-cards .dep-card {
+    padding-left: 0.4em;
+    padding-top: 0.3em;
+  }
+  main .dep-cards .dep-card .dep-card-title {
+    font-size: clamp(1.4rem, 1.4vw, 3rem);
+  }
+  main .dep-cards .dep-card .dep-image {
+    width: 70%;
+    max-width: 70px;
+  }
+  main .dep-cards .dep-card .dep-card-span {
+    font-size: clamp(1rem, 1vw, 2rem);
+  }
+  main .history-employees {
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  main .history-employees .history-section {
+    margin: 0px;
+  }
+  main .history-employees .history-section .subtitle {
+    padding-bottom: 20px;
+    font-size: clamp(2.2rem, 3.5vw, 5rem);
+  }
+  main .history-employees .history-section p {
+    width: 90%;
+    font-size: clamp(1rem, 2.5vw, 3rem);
+    text-align: justify;
+  }
+  main .history-employees .employees {
+    padding: 0% 0% 20px;
+  }
+  main .history-employees .employees .subtitle {
+    font-size: clamp(2.2rem, 3.5vw, 5rem);
+  }
+  main .history-employees .employees .employees-slider {
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    justify-items: center;
+  }
+  main .history-employees .employees .employees-slider .photo-link {
+    width: 90%;
+  }
+  main .history-employees .employees .employees-slider .button-slider1,
+  main .history-employees .employees .employees-slider .button-slider2 {
+    display: none;
+  }
+  main .inform-banner {
+    margin: 20px 0% 40px;
+  }
+  main .inform-banner .inform-banner-wrap {
+    margin: 0px auto;
+    width: 50%;
+  }
+  main .inform-banner .inform-banner-wrap #inform-subtitle {
+    font-size: clamp(3rem, 7vw, 7rem);
+  }
+  main .inform-banner .inform-banner-wrap .inform-img-container {
+    width: 40%;
+    margin: 0%;
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    margin-bottom: 0%;
+  }
+  main .pro-cards-section {
+    margin: 30px 0%;
+  }
+  main .pro-cards-section .subtitle {
+    text-align: left;
+    padding: 20px;
+    font-size: clamp(2.2rem, 3.5vw, 5rem);
+  }
+  main .pro-cards-section .pro-cards {
+    margin: 10px 20px 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  main .pro-cards-section .pro-cards .pro-card {
+    gap: 1em;
+  }
+  main .pro-cards-section .pro-cards .pro-card .pro-card-title {
+    font-size: clamp(2rem, 2vw, 4rem);
+  }
+  main .pro-cards-section .pro-cards .pro-card .description {
+    font-size: clamp(1rem, 2.5vw, 3rem);
+    text-align: justify;
+  }
+  main .app-store-banner {
+    padding: 20px 30px;
+    gap: 10px;
+  }
+  main .app-store-banner .app-store-banner-span {
+    font-size: clamp(1.4rem, 1.4vw, 3rem);
+  }
+  main .app-store-banner .title-app-links #app-store-banner-title {
+    width: 100%;
+    font-size: clamp(2rem, 6vw, 6rem);
+  }
+  main .app-store-banner .title-app-links .app-store-links {
+    width: 90%;
+  }
+  main .app-store-banner .app-store-pics {
+    margin-top: 0%;
+    width: 60%;
+    align-self: start;
+    justify-self: center;
+  }
+  main .app-store-banner .app-store-pics .dog-img {
+    display: none;
+    margin-top: 0%;
+    width: 70%;
+    bottom: 3em;
+    right: 10%;
+  }
+  main .app-store-banner .app-store-pics .phone-img {
+    position: static;
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  main .contacts-banner {
+    margin: 20px;
+  }
+  main .contacts-banner .subtitle {
+    font-size: clamp(2.2rem, 3.5vw, 5rem);
+  }
+  main .contacts-banner .address-container-wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "address1 address2" "map map";
+  }
+  main .contacts-banner .address-container-wrapper .map-link-container {
+    width: 60%;
+    justify-self: center;
+  }
+  main .contacts-banner .address-container-wrapper .address-container1 .address-container-subtitle,
+  main .contacts-banner .address-container-wrapper .address-container2 .address-container-subtitle {
+    font-size: clamp(1.3rem, 3.2vw, 4rem);
+  }
+  main .contacts-banner .address-container-wrapper .address-container1 .address-container2 .address-phone-hours,
+  main .contacts-banner .address-container-wrapper .address-container2 .address-container2 .address-phone-hours {
+    align-self: end;
+  }
+  main .contacts-banner .address-container-wrapper .address-container1 .address-phone-hours,
+  main .contacts-banner .address-container-wrapper .address-container2 .address-phone-hours {
+    width: 80%;
+  }
+  main .contacts-banner .address-container-wrapper .address-container1 .address-phone-hours .description,
+  main .contacts-banner .address-container-wrapper .address-container2 .address-phone-hours .description {
+    font-size: clamp(1rem, 2.5vw, 3rem);
+  }
+  main .contacts-banner .address-container-wrapper .address-container1 .address-phone-hours .address-icon,
+  main .contacts-banner .address-container-wrapper .address-container1 .address-phone-hours .phone-icon,
+  main .contacts-banner .address-container-wrapper .address-container1 .address-phone-hours .clock-icon,
+  main .contacts-banner .address-container-wrapper .address-container2 .address-phone-hours .address-icon,
+  main .contacts-banner .address-container-wrapper .address-container2 .address-phone-hours .phone-icon,
+  main .contacts-banner .address-container-wrapper .address-container2 .address-phone-hours .clock-icon {
+    width: 80%;
   }
 }/*# sourceMappingURL=style.css.map */
