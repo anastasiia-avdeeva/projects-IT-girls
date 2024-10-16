@@ -982,10 +982,20 @@ footer .social-and-apps .made_by {
   main .contacts-banner .address-container-wrapper {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "address1 address2" "map map";
+    justify-items: center;
+    gap: 15px;
   }
   main .contacts-banner .address-container-wrapper .map-link-container {
     width: 60%;
     justify-self: center;
+  }
+  main .contacts-banner .address-container-wrapper .address-container1,
+  main .contacts-banner .address-container-wrapper .address-container2 {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto auto;
+    align-content: stretch;
+    justify-content: start;
   }
   main .contacts-banner .address-container-wrapper .address-container1 .address-container-subtitle,
   main .contacts-banner .address-container-wrapper .address-container2 .address-container-subtitle {
@@ -997,7 +1007,7 @@ footer .social-and-apps .made_by {
   }
   main .contacts-banner .address-container-wrapper .address-container1 .address-phone-hours,
   main .contacts-banner .address-container-wrapper .address-container2 .address-phone-hours {
-    width: 80%;
+    width: 100%;
   }
   main .contacts-banner .address-container-wrapper .address-container1 .address-phone-hours .description,
   main .contacts-banner .address-container-wrapper .address-container2 .address-phone-hours .description {
@@ -1010,5 +1020,46 @@ footer .social-and-apps .made_by {
   main .contacts-banner .address-container-wrapper .address-container2 .address-phone-hours .phone-icon,
   main .contacts-banner .address-container-wrapper .address-container2 .address-phone-hours .clock-icon {
     width: 80%;
+  }
+  footer {
+    padding: 10px;
+    grid-template-columns: 2fr 1fr;
+    font-size: clamp(1.2rem, 1.5vw, 4rem);
+  }
+  footer .logo-and-nav-footer {
+    gap: 10px;
+  }
+  footer .logo-and-nav-footer .logo-container-footer {
+    width: 80%;
+  }
+  footer .logo-and-nav-footer .logo-container-footer .name {
+    font-size: clamp(2.2rem, 3.5vw, 5rem);
+  }
+  footer .logo-and-nav-footer nav .footer-nav-list {
+    width: 100%;
+    margin-left: 0px;
+  }
+  footer .logo-and-nav-footer nav .footer-nav-list li:first-child {
+    margin-right: 10px;
+  }
+  footer .logo-and-nav-footer nav .footer-nav-list li {
+    text-align: center;
+  }
+  footer .social-and-apps {
+    width: 100%;
+  }
+  footer .social-and-apps .apps .app-link-footer .app-store-foot {
+    width: 90%;
+  }
+  footer .social-and-apps .apps .app-link-footer .google-play-foot {
+    width: 100%;
+  }
+  footer .social-and-apps .social-links-foot .social-link-foot {
+    width: 15%;
+  }
+}
+@media screen and (max-width: 700px) {
+  footer {
+    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=style.css.map */

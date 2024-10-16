@@ -1065,7 +1065,8 @@ footer {
         grid-template-areas:
           "address1 address2"
           "map map";
-        // gap: 15px;
+        justify-items: center;
+        gap: 15px;
 
         .map-link-container {
           width: 60%;
@@ -1074,6 +1075,12 @@ footer {
 
         .address-container1,
         .address-container2 {
+          width: 100%;
+          display: grid;
+          grid-template-rows: auto auto;
+          align-content: stretch;
+          justify-content: start;
+
           .address-container-subtitle {
             font-size: $media-tablet-address-subtitle-font;
           }
@@ -1085,7 +1092,7 @@ footer {
           }
 
           .address-phone-hours {
-            width: 80%;
+            width: 100%;
 
             .description {
               font-size: $media-tablet-regular-font;
@@ -1100,5 +1107,63 @@ footer {
         }
       }
     }
+  }
+
+  footer {
+    padding: 10px;
+    grid-template-columns: 2fr 1fr;
+    font-size: clamp(1.2rem, 1.5vw, 4rem);
+
+    .logo-and-nav-footer {
+      gap: 10px;
+      .logo-container-footer {
+        width: 80%;
+
+        .name {
+          font-size: $media-tablet-h2-font;
+        }
+      }
+
+      nav {
+        .footer-nav-list {
+          width: 100%;
+          margin-left: 0px;
+
+          li:first-child {
+            margin-right: 10px;
+          }
+          li {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .social-and-apps {
+      width: 100%;
+
+      .apps {
+        .app-link-footer {
+          .app-store-foot {
+            width: 90%;
+          }
+          .google-play-foot {
+            width: 100%;
+          }
+        }
+      }
+
+      .social-links-foot {
+        .social-link-foot {
+          width: 15%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  footer {
+    font-size: 0.8rem;
   }
 }
