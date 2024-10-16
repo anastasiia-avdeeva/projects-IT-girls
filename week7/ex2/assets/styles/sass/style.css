@@ -1062,4 +1062,66 @@ footer .social-and-apps .made_by {
   footer {
     font-size: 0.8rem;
   }
+}
+@media screen and (max-width: 540px) {
+  .first-line .hamburger-menu .menu__btn span,
+  .first-line .hamburger-menu .menu__btn span::before,
+  .first-line .hamburger-menu .menu__btn span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ffc59e;
+    transition-duration: 0.25s;
+  }
+  .first-line .hamburger-menu .menu__btn span::before {
+    content: "";
+    top: -8px;
+  }
+  .first-line .hamburger-menu .menu__btn span::after {
+    content: "";
+    top: 8px;
+  }
+  .page-nav-header-banner .header-banner {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .page-nav-header-banner .header-banner .left-header-banner .appointment-form-link {
+    font-size: 3vw;
+  }
+  .page-nav-header-banner .header-banner .right-header-banner .header-banner-img-container2 {
+    display: none;
+  }
+  .page-nav-header-banner .header-banner .right-header-banner .phone-link {
+    text-align: center;
+  }
+  main .dep-cards {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  main .dep-cards .dep-card {
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: dense;
+  }
+  main .dep-cards .dep-card .dep-image {
+    grid-row: 1/3;
+    width: 40%;
+  }
+  main .dep-cards .dep-card .dep-card-span {
+    grid-row: 2/3;
+  }
+  main .history-employees {
+    padding: 10px 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  main .history-employees .history-section p {
+    font-size: 20px;
+  }
+  main .history-employees .employees .employees-slider {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 5px;
+  }
+  main .history-employees .employees .employees-slider .photo-link {
+    width: 90%;
+  }
 }/*# sourceMappingURL=style.css.map */

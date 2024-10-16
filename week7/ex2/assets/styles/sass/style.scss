@@ -1167,3 +1167,96 @@ footer {
     font-size: 0.8rem;
   }
 }
+
+@media screen and (max-width: 540px) {
+  .first-line {
+    .hamburger-menu {
+      #menu__toggle {
+      }
+
+      .menu__btn {
+        span,
+        span::before,
+        span::after {
+          display: block;
+          position: absolute;
+
+          width: 100%;
+          height: 3px;
+          background-color: $orange;
+
+          transition-duration: 0.25s;
+        }
+        span::before {
+          content: "";
+          top: -8px;
+        }
+        span::after {
+          content: "";
+          top: 8px;
+        }
+      }
+    }
+  }
+
+  .page-nav-header-banner {
+    .header-banner {
+      grid-template-columns: 1fr;
+      gap: 10px;
+
+      .left-header-banner {
+        .appointment-form-link {
+          font-size: 3vw;
+        }
+      }
+
+      .right-header-banner {
+        .header-banner-img-container2 {
+          display: none;
+        }
+        .phone-link {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  main {
+    .dep-cards {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      .dep-card {
+        grid-template-rows: 1fr 1fr;
+        grid-auto-flow: dense;
+        .dep-image {
+          grid-row: 1/3;
+          width: 40%;
+        }
+        .dep-card-span {
+          grid-row: 2/3;
+        }
+      }
+    }
+
+    .history-employees {
+      padding: 10px 10px;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+
+      .history-section {
+        p {
+          font-size: 20px;
+        }
+      }
+
+      .employees {
+        .employees-slider {
+          grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+          gap: 5px;
+          .photo-link {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}
