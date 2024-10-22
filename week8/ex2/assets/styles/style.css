@@ -14,6 +14,7 @@
 
 a {
   text-decoration: none;
+  color: #5222d0;
 }
 
 ul {
@@ -28,8 +29,17 @@ h1,
   font-style: normal;
 }
 
+.main__description,
+.nav-list__item-link {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.4vw;
+  line-height: 160%;
+}
+
 .header {
-  margin: 6.3% auto 5.3%;
+  margin: 6.3% auto 0;
   width: 89.6%;
   display: flex;
   justify-content: space-between;
@@ -55,10 +65,22 @@ h1,
   line-height: normal;
 }
 
+.header__basket-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.3%;
+}
+
+.basket-btn__icon {
+  padding-left: 5%;
+  padding-bottom: 5%;
+}
+
 .main,
 .footer {
   margin-left: 8.75%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .main {
@@ -72,18 +94,13 @@ h1,
   grid-row: 1/2;
   margin-bottom: 0;
   align-self: end;
-  font-size: 3.9vw;
+  font-size: 4.1vw;
   line-height: 120%;
 }
 
 .main__description {
   grid-column: 1/2;
   grid-row: 2/3;
-  font-family: "Roboto Slab", serif;
-  font-size: 1.3vw;
-  font-weight: 300;
-  font-style: normal;
-  line-height: 160%;
 }
 
 .main__buy-btn-container {
@@ -94,12 +111,15 @@ h1,
 
 .buy-btn-container__buy-btn {
   width: 100%;
-  padding: 25px 0;
+  padding: 25px 0 20px;
+  display: flex;
+  justify-content: center;
   font-size: 2.3vw;
 }
 
 .buy-btn__icon {
-  width: 13%;
+  width: 16%;
+  padding-left: 3%;
 }
 
 .main__main-img-container {
@@ -112,4 +132,14 @@ h1,
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.footer {
+  width: 45%;
+  margin-top: -7%;
+}
+
+.nav__nav-list {
+  display: flex;
+  justify-content: space-between;
 }
