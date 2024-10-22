@@ -22,6 +22,7 @@ ul {
 }
 
 h1,
+h2,
 .btn {
   text-transform: uppercase;
   font-family: "Intro", sans-serif;
@@ -30,7 +31,9 @@ h1,
 }
 
 .main__description,
-.nav-list__item-link {
+.nav-list__item-link,
+.benefit__description,
+.subscription__input::placeholder {
   font-family: "Roboto Slab", serif;
   font-weight: 300;
   font-style: normal;
@@ -142,4 +145,21 @@ h1,
 .nav__nav-list {
   display: flex;
   justify-content: space-between;
+}
+
+/* special styles for features.hml */
+.features-header {
+  margin-bottom: 7%;
+}
+
+.features-main {
+  display: block;
+}
+
+.features-footer {
+  margin-top: 0;
+}
+
+.features-footer a {
+  color: #000;
 }
