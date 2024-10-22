@@ -59,7 +59,6 @@ h2,
 }
 
 .btn {
-  width: 9%;
   border: none;
   border-radius: 100px;
   background-color: #5222d0;
@@ -69,6 +68,7 @@ h2,
 }
 
 .header__basket-btn {
+  width: 9%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,14 +149,70 @@ h2,
 
 /* special styles for features.hml */
 .features-header {
-  margin-bottom: 7%;
+  margin-bottom: 5%;
 }
 
 .features-main {
+  border: 1px solid black;
   display: block;
+  margin-bottom: 30px;
+  width: 86%;
+}
+
+.features-main .main__title {
+  margin-bottom: 30px;
+}
+
+.main__benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 70px;
+}
+
+.benefits__benefit {
+  max-width: 400px;
+  display: grid;
+  gap: 10px;
+}
+
+.benefits__benefit_with-pic {
+  grid-template-rows: 1.6fr 0.2fr 0.5fr;
+}
+
+.benefit__img-container {
+  background: linear-gradient(#ec615b 85%, #fff 15%);
+  text-align: center;
+}
+
+.benefit__img_lower {
+  position: relative;
+  top: 6%;
+}
+
+.benefit__img_narrow {
+  width: 93%;
+}
+
+.benefit__title {
+  align-self: end;
+  font-size: 2vw;
+}
+
+.benefits__benefit_without-pic {
+  grid-template-rows: 1fr 2.5fr;
+}
+
+.benefits__subscription {
+  background-color: #ec615b;
+}
+
+.subscription__title {
+  color: #fff;
+  font-size: 2vw;
 }
 
 .features-footer {
+  border: 1px solid black;
   margin-top: 0;
 }
 
