@@ -12,9 +12,9 @@
   box-sizing: border-box;
 }
 
-body {
-  max-width: 1500px;
-}
+/* body {
+  max-width: 1540px;
+} */
 
 a {
   text-decoration: none;
@@ -41,7 +41,8 @@ h2,
   font-family: "Roboto Slab", serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 1.4vw;
+  /* font-size: 1.4vw; */
+  font-size: clamp(1rem, 1.4vw, 2rem);
   line-height: 160%;
 }
 
@@ -143,12 +144,14 @@ h2,
 
 .footer {
   width: 45%;
+  min-width: 400px;
   margin-top: -7%;
 }
 
 .nav__nav-list {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
 /* special styles for features.hml */
@@ -157,9 +160,8 @@ h2,
 }
 
 .features-main {
-  border: 1px solid black;
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   width: 86%;
 }
 
@@ -168,13 +170,18 @@ h2,
 }
 
 .main__benefits {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 50px 70px;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  grid-template-rows: auto;
+  gap: 40px 70px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 30px;
 }
 
 .benefits__benefit {
-  max-width: 400px;
+  width: 30%;
   display: grid;
   gap: 10px;
 }
@@ -184,22 +191,20 @@ h2,
 }
 
 .benefit__img-container {
+  width: 100%;
   background: linear-gradient(#ec615b 85%, #fff 15%);
   text-align: center;
 }
 
-.benefit__img_lower {
-  position: relative;
-  top: 6%;
-}
-
-.benefit__img_narrow {
-  width: 93%;
+.benefit__img {
+  height: 100%;
+  width: 100%;
 }
 
 .benefit__title {
   align-self: end;
   font-size: 2vw;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
 }
 
 .benefits__benefit_without-pic {
@@ -207,7 +212,8 @@ h2,
 }
 
 .benefits__subscription {
-  padding-left: 5%;
+  padding-left: 20px;
+  width: 30%;
   display: grid;
   grid-template-rows: 1fr 1fr 1.5fr;
   align-items: end;
@@ -217,7 +223,7 @@ h2,
 
 .subscription__title {
   color: #fff;
-  font-size: 2vw;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
 }
 
 .subscription-form__input {
@@ -228,13 +234,14 @@ h2,
 
 .subscription__btn {
   width: 45%;
-  padding: 5% 0;
+  padding: 4% 0;
   align-self: center;
 }
 
 .features-footer {
-  border: 1px solid black;
-  margin-top: 0;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  /* width: 100%; */
 }
 
 .features-footer a {
